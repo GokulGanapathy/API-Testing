@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "94fabae5-a247-40f3-acd0-eab4c1c0fae0",
+		"name": "Postman Library API v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28340455",
+		"_collection_link": "https://www.postman.com/satellite-participant-40068355/workspace/postman-api-fundamentals-student-expert/collection/28340455-94fabae5-a247-40f3-acd0-eab4c1c0fae0?action=share&creator=28340455&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "get books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/books",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "who moved my cheese",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get fiction books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/books?genre=fiction&checkedOut=false",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "fiction"
+						},
+						{
+							"key": "checkedOut",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get book by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/books/:id",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"books",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add a book",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.json());\r",
+							"\r",
+							"/*let a=\"This is let varibale\";\r",
+							"a=\"Tryoig to chnage\";\r",
+							"console.log(a);*/\r",
+							"\r",
+							"//Getting id of the added Book\r",
+							"const res = pm.response.json();\r",
+							"const id = res.id;\r",
+							"pm.collectionVariables.set(\"id\",id);   // Saving the id value in Collection Variable\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Think and Grow Rich\",\r\n  \"author\": \"Napoleon Hill\",\r\n  \"genre\": \"Finance and self Help\",\r\n  \"yearPublished\": 1930\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/books",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkout a book",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"checkedOut\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/books/:id",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"books",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/books/:id",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"books",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "skillcheck",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const res=pm.response.json();\r",
+							"const name=res.json.actorName\r",
+							"console.log(name);\r",
+							"\r",
+							"pm.collectionVariables.set(\"favoriteActor\",name)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "skillcheck",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "student-expert",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actorName\":\"Ajith\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{skillcheckBaseUrl}}?movieName=billa",
+					"host": [
+						"{{skillcheckBaseUrl}}"
+					],
+					"query": [
+						{
+							"key": "movieName",
+							"value": "billa"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "postmanrulz",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "api-key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": ""
+		},
+		{
+			"key": "id",
+			"value": ""
+		},
+		{
+			"key": "skillcheckBaseUrl",
+			"value": "https://postman-echo.com/post"
+		},
+		{
+			"key": "favoriteActor",
+			"value": ""
+		}
+	]
+}
