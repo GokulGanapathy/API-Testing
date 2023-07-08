@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "c3940625-138a-4cd3-ba79-8e6dd7d717fe",
+		"name": "REQRES_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27974431"
+	},
+	"item": [
+		{
+			"name": "GetUsersInPage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"postman.setNextRequest(\"CreateUser\");\r",
+							"\r",
+							"\r",
+							"//pm.globals.unset(\"page_no\");\r",
+							"\r",
+							"console.log(pm.environment.get(\"Name\"));\r",
+							"\r",
+							"console.log(pm.collectionVariables.get(\"Name\"));\r",
+							"\r",
+							"pm.test(\"Get a user and store as Variable\", function(){\r",
+							"    var res=pm.response.json();\r",
+							"    var resId=res.data[4].id;\r",
+							"\r",
+							"    pm.environment.set(\"Id\",resId);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"page_no\", 2)\r",
+							"pm.variables.get(\"variable_key\");\r",
+							"\r",
+							"pm.collectionVariables.set(\"Name\",\"Gokulanand\")\r",
+							"\r",
+							"//pm.environment.set(\"page_no\",6)\r",
+							"\r",
+							"pm.environment.set(\"Name\",\"Gokul\");\r",
+							"//pm.globals.get(\"variable_key\");\r",
+							"\r",
+							"pm.variables.get(\"variable_key\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{ReqResServer}}/api/users?page={{page_no}}",
+					"host": [
+						"{{ReqResServer}}"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "{{page_no}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.clear();\r",
+							"console.log(\"In Pre-Request of GerUser\");\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(\"In Test of the Request1\")\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});\r",
+							"\r",
+							"postman.setNextRequest(\"Update_User\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/{{Id}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"{{Id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.log(\"In PreRequest of CreateUser\");\r",
+							"\r",
+							"pm.sendRequest(\"https://reqres.in/api/users\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(\"In Test of Create User\");\r",
+							"\r",
+							"pm.test(\"Status code is 201 For Creating\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1Sec\", function () {    //pm.test if for Creating  Test\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);  \r",
+							"});\r",
+							"postman.setNextRequest(\"GetUser\");\r",
+							"\r",
+							"pm.test(\"Setting env from response\", function(){\r",
+							"    var resp=pm.response.json();\r",
+							"    var resId=resp.id;\r",
+							"    pm.environment.set(\"CreatedId\",resId);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Gokul\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"postman.setNextRequest(\"UpdatePartially\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Gokul\",\r\n    \"job\": \"zion resident\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ReqRes}}/api/users/2",
+					"host": [
+						"{{ReqRes}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePartially",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"postman.setNextRequest(\"DeleteAUser\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"job\": \"QAEngineer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ReqRes}}/api/users/2",
+					"host": [
+						"{{ReqRes}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAUser",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.log(pm.environment.get(\"CreatedId\"));\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"postman.setNextRequest(\"RegisterUser\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{ReqRes}}/api/users/{{CreatedId}}",
+					"host": [
+						"{{ReqRes}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"{{CreatedId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ReqResServer}}/{{URI}}",
+					"host": [
+						"{{ReqResServer}}"
+					],
+					"path": [
+						"{{URI}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"console.log(\"In Collection pre-Request\")"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"console.log(\"In Collection Test\")"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "page_no",
+			"value": "2",
+			"type": "string"
+		},
+		{
+			"key": "Name",
+			"value": ""
+		}
+	]
+}
