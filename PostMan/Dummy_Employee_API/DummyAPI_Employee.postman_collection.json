@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "96aaba6e-617e-4e01-8db2-72ad38dd9d4f",
+		"name": "DummyAPI_Employee",
+		"description": "This is the Collection of [http://dummy.restapiexample.com/]() where we can test the Employees details using the API Calls and it contains REST Methods like Post, Get, Put and Delete.\n\nAssertions are also made for Testing and correlation has been applied by using variables.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27974431"
+	},
+	"item": [
+		{
+			"name": "GetAllEmployee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status Code is 200 and OK\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"var resp=pm.response.json();\r",
+							"pm.test(\"Check for the Employee\",function(){\r",
+							"    pm.expect(pm.response.text()).to.includes(\"Brielle Williamson\");\r",
+							"});\r",
+							"\r",
+							"const noOfEmp=resp.data.length;\r",
+							"console.log(\"No.Of.Employees\"+noOfEmp);\r",
+							"\r",
+							"for(var i=0;i<noOfEmp;++i)\r",
+							"{\r",
+							"    if(resp.data[i]['employee_age']===59)\r",
+							"    {\r",
+							"        pm.globals.set(\"EmpId\",resp.data[i].id);\r",
+							"        break;\r",
+							"    }\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Json Response\",function(){\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.be.eql(\"application/json\")\r",
+							"});\r",
+							"\r",
+							"console.log(pm.response.headers.all);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dummy.restapiexample.com/api/v1/employees",
+					"protocol": "https",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SingleEmployee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var response=pm.response.json();\r",
+							"\r",
+							"pm.test(\"Employee fetch Check\",function(){\r",
+							"    pm.expect(response.status).to.be.equal(\"success\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"age less than 60\",function(){\r",
+							"    pm.expect(response.data.employee_age).to.be.below(60);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is Json or not\",function(){\r",
+							"    pm.expect(pm.response).to.be.json;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dummy.restapiexample.com/api/v1/employee/:id",
+					"protocol": "https",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{EmpId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateEmployee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Record Created and status is either 200 or 201\",function(){\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+							"});\r",
+							"\r",
+							"var response =pm.response.json();\r",
+							"const id=response.data.id;\r",
+							"console.log(\"Id :\"+id);\r",
+							"\r",
+							"pm.globals.set(\"EmpIdCreated\",id);\r",
+							"\r",
+							"pm.test(\"Employee Created success message\",function(){\r",
+							"    pm.expect(response.message).to.contain(\"Successfully\");\r",
+							"    pm.expect(response.message).to.contains(\"added\");\r",
+							"});\r",
+							"\r",
+							"console.log(pm.response.headers.all());\r",
+							"\r",
+							"pm.test(\"Application/Json\",function(){\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.be.eql(\"application/json\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Nexon\",\r\n    \"salary\":\"1200000\",\r\n    \"age\":\"23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummy.restapiexample.com/api/v1/create",
+					"protocol": "https",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Employee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Success Response Status code 200\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var resp=pm.response.json();\r",
+							"pm.test(\"Data Updated\",function(){\r",
+							"    pm.expect(resp.message).to.contains(\"updated\");\r",
+							"});\r",
+							"\r",
+							"console.log(resp.data.name);\r",
+							"\r",
+							"pm.test(\"Response Time less than 2sec\",function(){\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2500);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"GOKULANAND\",\r\n    \"salary\":\"1250000\",\r\n    \"age\":\"22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dummy.restapiexample.com/api/v1/update/:id",
+					"protocol": "https",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"update",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{EmpIdCreated}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAEmployee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status Code Check\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201,204]);\r",
+							"});\r",
+							"\r",
+							"var resp=pm.response.json();\r",
+							"var response=pm.response.text();\r",
+							"pm.test(\"Record Data Deleted\",function(){\r",
+							"    pm.expect(resp.message).to.be.contains(\"deleted\");\r",
+							"    pm.expect(response).to.have.string(\"Successfully\")\r",
+							"});\r",
+							"\r",
+							"console.log(pm.response.headers.all);\r",
+							"\r",
+							"pm.test(\"Content-Type is present\",function(){\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Content-Type is JSON\",function(){\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.be.eql(\"application/json\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://dummy.restapiexample.com/api/v1/delete/2535",
+					"protocol": "https",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"delete",
+						"2535"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
