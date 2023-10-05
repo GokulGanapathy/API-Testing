@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="9352943d-5bdd-4a0d-b3e9-2dd7cc7e5747" activeEnvironment="Default" name="FrameWork1-BooksAPI" resourceRoot="" soapui-version="5.7.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="5be8d94e-542f-473d-9be9-bb405c3cc79c" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://simple-books-api.glitch.me" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://simple-books-api.glitch.me</con:endpoint></con:endpoints><con:resource name="" path="" id="ec1feee6-d823-480a-aa69-d2f717cf8952"><con:settings/><con:parameters/><con:method name="GetMethod" id="b7fdceef-cd54-4e8b-8b2d-86641f052190" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:stat="https://simple-books-api.glitch.me/status">stat:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>404 400</con:status><con:params/><con:element xmlns:ns="https://simple-books-api.glitch.me/books/204">ns:Fault</con:element></con:representation><con:request name="Request 1" id="56001f04-b4d4-4fcc-a572-c09c55b008e8" mediaType="application/json"><con:settings/><con:endpoint>https://simple-books-api.glitch.me</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="PostMethod" id="02159ef7-2a97-4173-8ccc-9fc1274537c4" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/plain; charset=utf-8</con:mediaType><con:status>422</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>400 409 401 404</con:status><con:params/><con:element xmlns:sim="https://simple-books-api.glitch.me/">sim:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:sim="https://simple-books-api.glitch.me/">sim:Response</con:element></con:representation><con:request name="Request 1" id="677c6e42-48d0-475f-85e8-54bb62a4e17f" mediaType="application/json" postQueryString="false"><con:settings/><con:endpoint>https://simple-books-api.glitch.me</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="DeleteMethod" id="511b2ae6-0979-428e-9e9b-1bd921497524" method="DELETE"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:oyl="https://simple-books-api.glitch.me/orders/OyL4Bg2kBAuWpsVCt2vEx">oyl:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="35d3c079-76ba-4f0e-8c2d-16e8a468f4ac" mediaType="application/json" postQueryString="false"><con:settings/><con:endpoint>https://simple-books-api.glitch.me</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="PatchMethod" id="ca8ab754-7720-4833-b6bc-712a40b575bd" method="PATCH"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>401 404</con:status><con:params/><con:element xmlns:oyl="https://simple-books-api.glitch.me/orders/OyL4Bg2kBAuWpsVCt2vEx">oyl:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="a4cb373c-d4d7-430a-b303-3d43f5876d28" mediaType="application/json" postQueryString="false"><con:settings/><con:endpoint>https://simple-books-api.glitch.me</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="5266fc3c-bd78-4c45-a129-aef357a0abc7" name="FrameWork-BooksAPI"><con:settings/><con:runType>PARALLELL</con:runType><con:testCase id="62bacc43-e0bf-4ed3-8515-ba4537b78db9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="APIClient" searchProperties="true"><con:settings/><con:testStep type="groovy" name="GetDataFromSheet" id="257014dc-05b4-45f5-a1f7-b9213713c2c3"><con:settings/><con:config><script>import jxl.*;
+import groovy.json.*;
+import com.eviware.soapui.support.GroovyUtils;
+
+def groovyUtils = new GroovyUtils(context)
+def projectPath = groovyUtils.projectPath
+log.info projectPath
+
+File excelFile = new File(projectPath+"\\BooksAPI.xls")
+
+Workbook workbook=Workbook.getWorkbook(excelFile)
+Sheet sheet1=workbook.getSheet("APIData")
+Sheet sheet2=workbook.getSheet("TestData")
+
+def noOfRowsSheet1=sheet1.getRows()
+log.info noOfRowsSheet1
+def noOfRowsSheet2=sheet2.getRows()
+log.info noOfRowsSheet2
+
+def endpointUrl = sheet1.getCell(0,1).getContents()
+log.info endpointUrl
+def apiClientRegURI =  sheet1.getCell(1,1).getContents()
+log.info apiClientRegURI
+def apiClientRegMethod = sheet1.getCell(2,1).getContents()
+log.info apiClientRegMethod
+def apiClientReq = sheet2.getCell(5,1).getContents()
+log.info apiClientReq
+
+//Saving Values in the properties
+testRunner.testCase.testSuite.setPropertyValue("serverURL",endpointUrl)
+testRunner.testCase.getTestStepByName("Properties").setPropertyValue("URI",apiClientRegURI)
+testRunner.testCase.getTestStepByName("Properties").setPropertyValue("Method",apiClientRegMethod)
+testRunner.testCase.getTestStepByName("Properties").setPropertyValue("Request",apiClientReq)
+
+def clientName = sheet2.getCell(6,1).getContents()
+def clientMail = sheet2.getCell(7,1).getContents()
+
+def jsonSlurper = new JsonSlurper()
+def jsonReq = jsonSlurper.parseText(apiClientReq)
+jsonReq.clientName=clientName
+jsonReq.clientEmail=clientMail
+
+log.info jsonReq
+jsonReq = JsonOutput.toJson(jsonReq)
+log.info jsonReq
+
+def endpoint = endpointUrl+apiClientRegURI
+//Passing this values into Request
+testRunner.testCase.getTestStepByName("APIClientRegistration").setPropertyValue("Request",jsonReq)
+testRunner.testCase.getTestStepByName("APIClientRegistration").setPropertyValue("Endpoint",endpoint)
+
+testRunner.testCase.getTestStepByName("APIClientRegistration").run(testRunner,context);</script></con:config></con:testStep><con:testStep type="restrequest" name="APIClientRegistration" id="fbaabc07-28f8-457f-854b-388eadc80267"><con:settings/><con:config service="https://simple-books-api.glitch.me" resourcePath="" methodName="PostMethod" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="APIClientRegistration" id="677c6e42-48d0-475f-85e8-54bb62a4e17f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://simple-books-api.glitch.me/api-clients/</con:endpoint><con:request>{"clientName":"Adaamn","clientEmail":"John.adaman@mail.com"}</con:request><con:originalUri>https://simple-books-api.glitch.me/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="properties" name="Properties" id="ba233030-a859-48d9-a882-2d909a2f5b6f"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>URI</con:name><con:value>/api-clients/</con:value></con:property><con:property><con:name>Method</con:name><con:value>/status</con:value></con:property><con:property><con:name>Request</con:name><con:value>{
+   "clientName": "Postman",
+   "clientEmail": "valentin@example.com"
+}</con:value></con:property><con:property><con:name>Response</con:name><con:value>{"error":"API client already registered. Try a different email."}</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="getAccessToken" id="38eba747-db7f-4296-952d-b0409aa57f9e"><con:settings/><con:config><script>import groovy.json.*;
+import com.eviware.soapui.support.GroovyUtils
+
+def groovyUtils = new GroovyUtils(context)
+def projectPath = groovyUtils.projectPath
+log.info projectPath
+
+def response = testRunner.testCase.getTestStepByName("APIClientRegistration").getPropertyValue("Response")
+log.info response
+
+testRunner.testCase.getTestStepByName("Properties").setPropertyValue("Response",response)
+
+if(response.contains("error"))
+{
+	log.info "Have to Change the Credentials"
+}
+else
+{
+	def jsonSlurper = new JsonSlurper()
+	jsonResponse = jsonSlurper.parseText(response)
+	
+	accessToken = jsonResponse.accessToken
+	log.info accessToken
+	
+	//Setting AccessToken Value in Properties
+	context.testCase.testSuite.setPropertyValue("accessToken",accessToken)
+	context.testCase.getTestStepByName("Properties").setPropertyValue("accessToken",accessToken)
+
+	File file = new File(projectPath+"\\Responses\\APIClientReg_Response.txt")
+	file.write(jsonResponse)
+}</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="3ce27da3-aef4-464d-94a4-c02dbe5bfe54" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="FetchingBookDetails" searchProperties="true"><con:settings/><con:testStep type="groovy" name="FetchingValuesAndRunningRestMethods" id="6226d765-f4b4-437c-8c72-8e5ffd05d523"><con:settings/><con:config><script>import groovy.json.*
+import jxl.*
+import com.eviware.soapui.support.GroovyUtils
+
+def groovyUtils = new GroovyUtils(context)
+def projectPath = groovyUtils.projectPath
+log.info projectPath
+File excelFile = new File(projectPath+"\\BooksAPI.xls")
+Workbook workbook=Workbook.getWorkbook(excelFile)
+
+Sheet APISheet = workbook.getSheet("APIData")
+Sheet DataSheet = workbook.getSheet("TestData")
+
+def statusURI = APISheet.getCell(2,1).getContents()
+def listOfBooksURI = APISheet.getCell(3,1).getContents()
+def specificBookURI = APISheet.getCell(4,1).getContents()
+
+log.info statusURI
+log.info listOfBooksURI
+log.info specificBookURI
+
+//Setting URI Values in Properties
+testRunner.testCase.getTestStepByName("Properties").setPropertyValue("statusURI",statusURI)
+testRunner.testCase.getTestStepByName("Properties").setPropertyValue("listOfBooksURI",listOfBooksURI)
+testRunner.testCase.getTestStepByName("Properties").setPropertyValue("specificBookURI",specificBookURI)
+
+def url=testRunner.testCase.testSuite.getPropertyValue("serverURL")
+log.info url
+
+//Appending EndPoint URIs
+def APIStatusEndPoint = url+statusURI
+def listOfBooksEndPoint = url+listOfBooksURI
+def specificBookEndPoint = url+specificBookURI
+
+log.info APIStatusEndPoint
+log.info listOfBooksEndPoint
+log.info specificBookEndPoint
+
+//Getting TestData from DataSheet
+def bookType= DataSheet.getCell(0,1).getContents()
+def limit = DataSheet.getCell(1,1).getContents()
+def bookId = DataSheet.getCell(2,1).getContents()
+log.info bookId
+log.info limit
+log.info bookType
+
+if(listOfBooksEndPoint.contains("limitValue"))
+{
+	listOfBooksEndPoint=listOfBooksEndPoint.replaceAll("\\{limitValue\\}",limit)
+	
+	listOfBooksEndPoint=listOfBooksEndPoint.replaceAll("\\{bookType\\}",bookType)
+	
+	log.info listOfBooksEndPoint
+	
+}
+if(specificBookEndPoint.contains(":bookId"))
+{
+	specificBookEndPoint=specificBookEndPoint.replaceAll(":bookId",bookId)
+	log.info specificBookEndPoint
+}
+
+//Setting endpoint in RestMethods
+testRunner.testCase.getTestStepByName("BookAPIStatus").setPropertyValue("Endpoint",APIStatusEndPoint)
+testRunner.testCase.getTestStepByName("ListOfBooks").setPropertyValue("Endpoint",listOfBooksEndPoint)
+testRunner.testCase.getTestStepByName("GetSpecificBook").setPropertyValue("Endpoint",specificBookEndPoint)
+
+//Running the TestSteps
+testRunner.testCase.getTestStepByName("BookAPIStatus").run(testRunner,context)
+testRunner.testCase.getTestStepByName("ListOfBooks").run(testRunner,context)
+testRunner.testCase.getTestStepByName("GetSpecificBook").run(testRunner,context)</script></con:config></con:testStep><con:testStep type="properties" name="Properties" id="e3cdb750-0de8-4b74-8165-3de97d0a1994"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>statusURI</con:name><con:value>/status</con:value></con:property><con:property><con:name>listOfBooksURI</con:name><con:value>/books?limit={limitValue}&amp;type={bookType}</con:value></con:property><con:property><con:name>specificBookURI</con:name><con:value>/books/:bookId</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="BookAPIStatus" id="a8f0b2b8-eb2a-4683-b402-b080fd0884dd"><con:settings/><con:config service="https://simple-books-api.glitch.me" resourcePath="" methodName="GetMethod" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="BookAPIStatus" id="56001f04-b4d4-4fcc-a572-c09c55b008e8" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://simple-books-api.glitch.me/status</con:endpoint><con:request/><con:originalUri>https://simple-books-api.glitch.me/status</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ListOfBooks" id="f50a2066-b57b-401f-9e72-5ebfed939cf7"><con:settings/><con:config service="https://simple-books-api.glitch.me" methodName="GetMethod" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ListOfBooks" id="1bd53abe-918b-426f-bda4-352ab997fea8" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://simple-books-api.glitch.me/books?limit=10&amp;type=fiction</con:endpoint><con:request/><con:originalUri>https://simple-books-api.glitch.me/books</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetSpecificBook" id="9ee20ba7-c197-425b-8d1d-463483f6a94e"><con:settings/><con:config service="https://simple-books-api.glitch.me" resourcePath="" methodName="GetMethod" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetSpecificBook" id="56001f04-b4d4-4fcc-a572-c09c55b008e8" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://simple-books-api.glitch.me/books/1</con:endpoint><con:request/><con:originalUri>https://simple-books-api.glitch.me/books/10</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="ResponseParsingAssertingAndStoring" id="91171a23-311e-4a98-96e2-cb875e409071"><con:settings/><con:config><script>import java.util.*
+import com.eviware.soapui.support.GroovyUtils
+
+
+//Getting Project Path for FilePaths
+def groovyUtils = new GroovyUtils(context)
+def projectPath = groovyUtils.projectPath;
+log.info projectPath
+
+
+def statusResponse = context.testCase.getTestStepByName("BookAPIStatus").getPropertyValue("Response");
+log.info statusResponse
+def listOfBooksResponse = context.testCase.getTestStepByName("ListOfBooks").getPropertyValue("Response");
+log.info listOfBooksResponse
+def getSpecificBookResponse = context.testCase.getTestStepByName("GetSpecificBook").getPropertyValue("Response");
+log.info getSpecificBookResponse
+
+
+
+//Saving Files of statusResponse
+if(!statusResponse.contains("error"))
+{
+	File file1_pass=new File(projectPath+"\\Responses\\BookAPIStatus_Response_Pass.txt")
+	file1_pass.write(statusResponse)
+}
+else
+{
+	File file1_fail=new File(projectPath+"\\Responses\\BookAPIStatus_Response_Fail.txt")
+	file1_fail.write(statusResponse)
+}
+
+
+//Saving Files of listOfBooksResponse
+if(!listOfBooksResponse.contains("error"))
+{
+	File file2_Pass=new File(projectPath+"\\Responses\\ListOfBooks_Response_Pass.txt")
+	file2_Pass.write(listOfBooksResponse)
+}
+else
+{
+	File file2_Fail=new File(projectPath+"\\Responses\\ListOfBooks_Response_Fail.txt")
+	file2_Fail.write(listOfBooksResponse)
+}
+
+//Saving Responses of GetSpecificBook
+if(!getSpecificBookResponse.contains("error"))
+{
+	File file2_Pass =  new File(projectPath+"\\Responses\\GetSpecificBook_Response_Pass.txt")
+	file2_Pass.write(getSpecificBookResponse)
+}
+else
+{
+	File file2_Fail =  new File(projectPath+"\\Responses\\GetSpecificBook_Response_Fail.txt")
+	file2_Fail.write(getSpecificBookResponse)
+}
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="7f8c8d99-4204-4fdb-a218-28beb2b5592b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="OrderBooksAndVariousServices" searchProperties="true"><con:settings/><con:testStep type="groovy" name="SetIndexToOne" id="1130985b-d5cb-4e5c-86af-e16118a6bfc8"><con:settings/><con:config><script>import jxl.*;
+import com.eviware.soapui.support.GroovyUtils;
+
+//Setting index as One for 1st Instance at datasheet of data Loop
+
+context.testCase.getTestStepByName("Properties").setPropertyValue("Index","1")
+
+def groovyUtils = new GroovyUtils(context)
+projectPath = groovyUtils.projectPath
+log.info projectPath
+
+File excelFile = new File(projectPath+"\\BooksAPI.xls")
+Workbook workbook = Workbook.getWorkbook(excelFile)
+Sheet apiSheet=workbook.getSheet("APIData")
+
+int ResultSetCount = apiSheet.getRows()
+log.info ResultSetCount
+
+context.testCase.getTestStepByName("Properties").setPropertyValue("ResultSetCount",ResultSetCount.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="FrameworkRun" id="4b5c07d7-08cc-490b-a911-096af5ec8851"><con:settings/><con:config><script>//Run the TestSteps from here
+
+testRunner.testCase.getTestStepByName("GetDataFromSheet").run(testRunner,context)
+testRunner.testCase.getTestStepByName("HeadersSetting").run(testRunner,context)
+testRunner.testCase.getTestStepByName("OrderBookRequestBuild").run(testRunner,context)
+testRunner.testCase.getTestStepByName("OrderBook").run(testRunner,context)
+testRunner.testCase.getTestStepByName("ValidateOrderBookAndGetAllOrders").run(testRunner,context)
+testRunner.testCase.getTestStepByName("GetAllOrder").run(testRunner,context)
+testRunner.testCase.getTestStepByName("ValidateAllOrderAndGetSpecificOrder").run(testRunner,context)
+testRunner.testCase.getTestStepByName("GetSpecificOrder").run(testRunner,context)
+testRunner.testCase.getTestStepByName("ValidateSpecificOrder").run(testRunner,context)
+testRunner.testCase.getTestStepByName("UpdateOrderAndDeleteOrder").run(testRunner,context)
+//testRunner.testCase.getTestStepByName("DTT_DataLoop").run(testRunner,context)
+//testRunner.testCase.getTestStepByName("Framework_TC_End").run(testRunner,context)
+</script></con:config></con:testStep><con:testStep type="properties" name="Properties" id="7993a797-68c0-4eb4-9d10-de9eb9c3ec5f"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>orderURI</con:name><con:value>/orders</con:value></con:property><con:property><con:name>getAllOrderURI</con:name><con:value>/orders</con:value></con:property><con:property><con:name>specificOrderURI</con:name><con:value>/orders/:orderId</con:value></con:property><con:property><con:name>updateOrderURI</con:name><con:value>/orders/:orderId</con:value></con:property><con:property><con:name>deleteOrderURI</con:name><con:value>/orders/:orderId</con:value></con:property><con:property><con:name>serverURL</con:name><con:value>https://simple-books-api.glitch.me</con:value></con:property><con:property><con:name>newBookId</con:name><con:value>5</con:value></con:property><con:property><con:name>customerName</con:name><con:value>Robert</con:value></con:property><con:property><con:name>newBookReq</con:name><con:value>{
+  "bookId": 5,
+  "customerName": "Leo"
+}</con:value></con:property><con:property><con:name>OrderBookResponse</con:name><con:value>{"created":true,"orderId":"he1aTPYGlzXS0D0UDHhM6"}</con:value></con:property><con:property><con:name>updateOrderReq</con:name><con:value>{
+  "customerName": "leo Das"
+}</con:value></con:property><con:property><con:name>updateOrderName</con:name><con:value>Oppenheimer</con:value></con:property><con:property><con:name>OrderID</con:name><con:value>he1aTPYGlzXS0D0UDHhM6</con:value></con:property><con:property><con:name>NoOfOrders</con:name><con:value>68</con:value></con:property><con:property><con:name>UpdateOrder</con:name><con:value>Y</con:value></con:property><con:property><con:name>DeleteOrder</con:name><con:value>Y</con:value></con:property><con:property><con:name>Index</con:name><con:value>3</con:value></con:property><con:property><con:name>ResultSetCount</con:name><con:value>3</con:value></con:property><con:property><con:name>TcId</con:name><con:value>TC02</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="GetDataFromSheet" id="1db4cac5-af69-4901-ba77-2094c347d130"><con:settings/><con:config><script>import jxl.*;
+import com.eviware.soapui.support.GroovyUtils;
+//import com.eviware.soapui.impl.wsdl.teststeps.WsdlTestRequestStepContext
+
+log.info "Inside GetDataFromSheet"
+
+//getting ProjectPath from groovyUtils
+def groovyUtils = new GroovyUtils(context)
+def projectPath = groovyUtils.projectPath
+log.info projectPath
+
+//Accessing the Excel sheets
+File excelFile = new File(projectPath+"\\BooksAPI.xls")
+Workbook workbook = Workbook.getWorkbook(excelFile)
+Sheet apiSheet = workbook.getSheet("APIData")
+Sheet testSheet = workbook.getSheet("TestData")
+
+int index = context.testCase.getTestStepByName("Properties").getPropertyValue("Index").toInteger()
+int resultset = context.testCase.getTestStepByName("Properties").getPropertyValue("ResultSetCount").toInteger()
+if(index==resultset)
+{
+	log.info "This is running Extra"
+}
+else
+{
+	//Reading URI and URL details for the Various services
+	def orderURI = apiSheet.getCell(5,1).getContents()
+	//log.info orderURI
+	def getAllOrderURI = apiSheet.getCell(6,1).getContents()
+	//log.info getAllOrderURI
+	def specificOrderURI = apiSheet.getCell(7,1).getContents()
+	//log.info specificOrderURI
+	
+	def updateOrderURI = apiSheet.getCell(8,1).getContents()
+	//log.info updateOrderURI
+	def deleteOrderURI = apiSheet.getCell(9,1).getContents()
+	//log.info deleteOrderURI
+	
+	//Stroring all the data in Properties
+	testRunner.testCase.getTestStepByName("Properties").setPropertyValue("orderURI",orderURI)
+	context.testCase.getTestStepByName("Properties").setPropertyValue("getAllOrderURI",getAllOrderURI)
+	testRunner.testCase.getTestStepByName("Properties").setPropertyValue("specificOrderURI",specificOrderURI)
+	testRunner.testCase.getTestStepByName("Properties").setPropertyValue("updateOrderURI",updateOrderURI)
+	testRunner.testCase.getTestStepByName("Properties").setPropertyValue("deleteOrderURI",deleteOrderURI)
+	
+	//log.info "1st Method of Getting Property Using getProperty : "+(context.testCase.testSuite.getPropertyValue("serverURL"))
+	
+	def serverURL = context.expand('${#TestSuite#serverURL}') 
+	//log.info "2nd Method using Property Expansion : "+serverURL
+	testRunner.testCase.getTestStepByName("Properties").setPropertyValue("serverURL",serverURL)
+	
+	//Getting Actual Test Data for Creating new Book
+	def newBookId = testSheet.getCell(8,index).getContents()
+	def customerName = testSheet.getCell(9,index).getContents()
+	def newBookReq = testSheet.getCell(3,index).getContents()
+	def updateOrderReq = testSheet.getCell(4,index).getContents()
+	def updateOrderName = testSheet.getCell(10,index).getContents()
+	def tcId = testSheet.getCell(13,index).getContents()
+	
+	/*log.info newBookId
+	log.info customerName
+	log.info newBookReq
+	log.info updateOrderReq
+	log.info updateOrderName
+	log.info tcId*/
+	
+	//Storing these values in Properties
+	context.testCase.getTestStepByName("Properties").setPropertyValue("newBookId",newBookId)
+	context.testCase.getTestStepByName("Properties").setPropertyValue("customerName",customerName)
+	context.testCase.getTestStepByName("Properties").setPropertyValue("newBookReq",newBookReq)
+	context.testCase.getTestStepByName("Properties").setPropertyValue("updateOrderReq",updateOrderReq)
+	context.testCase.getTestStepByName("Properties").setPropertyValue("updateOrderName",updateOrderName)
+	context.testCase.getTestStepByName("Properties").setPropertyValue("TcId",tcId)
+	
+	
+	//Update and Delete Opeartion Y/N Check and save in Properties
+	def update = testSheet.getCell(11,index).getContents()
+	def delete = testSheet.getCell(12,index).getContents()
+	//log.info update
+	//log.info delete
+	testRunner.testCase.getTestStepByName("Properties").setPropertyValue("UpdateOrder",update)
+	testRunner.testCase.getTestStepByName("Properties").setPropertyValue("DeleteOrder",delete)
+	
+	//testLooping
+	//testRunner.testCase.getTestStepByName("HeadersSetting").run(testRunner,context)
+}</script></con:config></con:testStep><con:testStep type="groovy" name="HeadersSetting" id="aefd9cee-4b9f-4e8b-928c-3bd15efa4eab"><con:settings/><con:config><script>import com.eviware.soapui.support.types.*;
+
+log.info "HeaderSetting"
+
+//getting Access Token for Authorization in Header values
+def accessToken=context.testCase.testSuite.getPropertyValue("accessToken")
+//log.info accessToken
+def bearerToken = "Bearer "+accessToken
+
+//Creating a Map for storing Header Values
+def headersMap=new StringToStringMap()
+headersMap.put("Authorization",bearerToken)
+
+testRunner.testCase.getTestStepByName("OrderBook").testRequest.setRequestHeaders(headersMap)
+testRunner.testCase.getTestStepByName("GetAllOrder").testRequest.setRequestHeaders(headersMap)
+testRunner.testCase.getTestStepByName("GetSpecificOrder").testRequest.setRequestHeaders(headersMap)
+testRunner.testCase.getTestStepByName("UpdateOrder").testRequest.setRequestHeaders(headersMap)
+testRunner.testCase.getTestStepByName("DeleteOrder").testRequest.setRequestHeaders(headersMap)
+
+//testRunner.testCase.getTestStepByName("OrderBookRequestBuild").run(testRunner,context)</script></con:config></con:testStep><con:testStep type="groovy" name="OrderBookRequestBuild" id="fb5e640b-de8a-4116-8cef-16461f286f88"><con:settings/><con:config><script>import groovy.json.*;
+import com.eviware.soapui.support.types.*; // For getting StringToStringMap class for HeaderMap of type MAP
+
+log.info "Inside OrderBookRequestBuild"
+
+//Getting all the Values from properties
+def request=context.testCase.getTestStepByName("Properties").getPropertyValue("newBookReq")
+//log.info request
+def name=context.testCase.getTestStepByName("Properties").getPropertyValue("customerName");
+//log.info name
+def bookID = context.testCase.getTestStepByName("Properties").getPropertyValue("newBookId");
+//log.info bookID
+
+def url=context.testCase.getTestStepByName("Properties").getPropertyValue("serverURL");
+def uri=context.testCase.getTestStepByName("Properties").getPropertyValue("orderURI");
+def endPoint = url+uri
+//log.info endPoint
+
+//Editing Request
+def jsonSlurper = new JsonSlurper()
+def jsonReq = jsonSlurper.parseText(request)
+//log.info jsonReq
+
+jsonReq.bookId=bookID
+jsonReq.customerName=name
+//log.info "After Replacing Values"+jsonReq
+
+//Coverting text back to Json using JsonOutput.toJson
+jsonReq = JsonOutput.toJson(jsonReq)
+//log.info jsonReq
+
+
+context.testCase.getTestStepByName("OrderBook").setPropertyValue("Endpoint",endPoint)
+context.testCase.getTestStepByName("OrderBook").setPropertyValue("Request",jsonReq)
+
+
+//testRunner.testCase.getTestStepByName("OrderBook").run(testRunner,context)
+//testRunner.testCase.getTestStepByName("ValidateOrderBookAndGetAllOrders").run(testRunner,context)</script></con:config></con:testStep><con:testStep type="restrequest" name="OrderBook" id="0d9c8e56-b451-423a-ab60-13fea2f1d0a5"><con:settings/><con:config service="https://simple-books-api.glitch.me" resourcePath="" methodName="PostMethod" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="OrderBook" id="677c6e42-48d0-475f-85e8-54bb62a4e17f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer 12621a3e6de51d7271579269b5dd42ae16a2d7141a60421f6b50c6c896d1ce46" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>https://simple-books-api.glitch.me/orders</con:endpoint><con:request>{"bookId":"5","customerName":"Robert"}</con:request><con:originalUri>https://simple-books-api.glitch.me/orders</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="ValidateOrderBookAndGetAllOrders" id="42e7f039-77bf-4e7c-8d75-57f82f8421b9"><con:settings/><con:config><script>import groovy.json.*;
+import com.eviware.soapui.support.*;
+
+log.info "Inside ValidateOrderandGetAllOrder"
+
+//Getting ProjectPath
+def groovyUtils = new GroovyUtils(context)
+def projectPath = groovyUtils.projectPath;
+//log.info projectPath
+
+def tcId = context.testCase.getTestStepByName("Properties").getPropertyValue("TcId");
+
+//Validating OrderBook Response and Storing 
+
+def response=context.expand('${OrderBook#Response}')
+//log.info response
+context.testCase.getTestStepByName("Properties").setPropertyValue("OrderBookResponse",response)
+if(response.contains("error"))
+{
+	if(response.contains("Missing Authorization header"))
+	{
+		log.info "Missing Authorization header Access Token"
+		File orderResponse=new File(projectPath+"\\Responses\\"+tcId+"orderResponse_Response_Fail.txt")
+		orderResponse.write(response)
+	}
+	else if(response.contains("book is not in stock"))
+	{
+		log.info "Book is not in Stock.Please choose other"
+		File orderResponse=new File(projectPath+"\\Responses\\"+tcId+"orderResponse_Response_Fail.txt")
+		orderResponse.write(response)
+	}
+	else if(response.contains("Invalid") || response.contains("missing bookId"))
+	{
+		log.info "Choose other Book from List"
+		File orderResponse = new File(projectPath+"\\Responses\\"+tcId+"orderResponse_Response_Fail.txt")
+		orderResponse.write(response)
+	}
+}
+else
+{
+	File orderResponse=new File(projectPath+"\\Responses\\"+tcId+"orderResponse_Response_Pass.txt")
+	orderResponse.write(response)
+	def jsonSlurper = new JsonSlurper()
+	jsonResponse =jsonSlurper.parseText(response)
+	if(jsonResponse.created==true)
+	{
+		orderID=jsonResponse.orderId
+		context.testCase.getTestStepByName("Properties").setPropertyValue("OrderID",orderID)
+	}
+}
+
+//Setting EndpointURI and Running RESTMethod
+def uri=context.testCase.getTestStepByName("Properties").getPropertyValue("getAllOrderURI")
+def url=context.testCase.getTestStepByName("Properties").getPropertyValue("serverURL")
+def endpoint=url+uri
+
+context.testCase.getTestStepByName("GetAllOrder").setPropertyValue("Endpoint",endpoint)
+
+//testRunner.testCase.getTestStepByName("GetAllOrder").run(testRunner,context)
+
+</script></con:config></con:testStep><con:testStep type="restrequest" name="GetAllOrder" id="25e9d830-bec4-4867-b0e9-d767a02ce5d6"><con:settings/><con:config service="https://simple-books-api.glitch.me" methodName="GetMethod" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetAllOrder" id="7616f908-3de4-493f-b052-bde0fcbf8a6d" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer 12621a3e6de51d7271579269b5dd42ae16a2d7141a60421f6b50c6c896d1ce46" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://simple-books-api.glitch.me/orders</con:endpoint><con:request/><con:originalUri>https://simple-books-api.glitch.me/orders</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="ValidateAllOrderAndGetSpecificOrder" id="0e3f4ec9-f2eb-4216-9216-2e00698ddf61"><con:settings/><con:config><script>import groovy.json.*;
+import com.eviware.soapui.support.GroovyUtils;
+
+
+log.info "Inside Validate All Order and get Specific Order"
+
+//Getting Projectpath
+def groovyUtils = new GroovyUtils(context)
+def projectPath = groovyUtils.projectPath
+//log.info projectPath
+
+def tcId = context.testCase.getTestStepByName("Properties").getPropertyValue("TcId");
+
+//getting Response from RestMethod
+def response = context.expand('${GetAllOrder#Response}')
+//log.info "Response"+response
+
+//validating Response and Storing on Local
+if(response=="[]")
+{
+	log.info "NoOrders Placed"
+	File allOrderResponse = new File(projectPath+"\\Responses\\"+tcId+"allOrders_Response_Fail.txt")
+	allOrderResponse.write("No Orders Placed By the User!!!")
+}
+else
+{
+	def jsonSlurper=new JsonSlurper()
+	def jsonResponse=jsonSlurper.parseText(response)
+	def noOfOrders = jsonResponse.size()
+	//log.info "Number of Orders Placed :"+noOfOrders
+	context.testCase.getTestStepByName("Properties").setPropertyValue("NoOfOrders",noOfOrders.toString())
+	File allOrderResponse = new File(projectPath+"\\Responses\\"+tcId+"allOrders_Response_Pass.txt")
+	allOrderResponse.write(JsonOutput.toJson(jsonResponse))
+}
+
+def orderID = context.testCase.getTestStepByName("Properties").getPropertyValue("OrderID")
+def uri=context.testCase.getTestStepByName("Properties").getPropertyValue("specificOrderURI")
+def url=context.testCase.getTestStepByName("Properties").getPropertyValue("serverURL")
+def endPoint=url+uri
+
+if(endPoint.contains(":orderId"))
+{
+	//log.info true
+	endPoint=endPoint.replaceAll(":orderId",orderID)
+	//log.info endPoint
+}
+context.testCase.getTestStepByName("GetSpecificOrder").setPropertyValue("Endpoint",endPoint)
+
+//testRunner.testCase.getTestStepByName("GetSpecificOrder").run(testRunner,context)
+</script></con:config></con:testStep><con:testStep type="restrequest" name="GetSpecificOrder" id="e479e02a-f7f1-457a-a3b6-6fce94708046"><con:settings/><con:config service="https://simple-books-api.glitch.me" methodName="GetMethod" resourcePath="" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetSpecificOrder" id="ad1239eb-0bdf-494c-9a47-ca492a6443e0" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer 12621a3e6de51d7271579269b5dd42ae16a2d7141a60421f6b50c6c896d1ce46" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://simple-books-api.glitch.me/orders/he1aTPYGlzXS0D0UDHhM6</con:endpoint><con:request/><con:originalUri>https://simple-books-api.glitch.me/orders/KHR06GGNUlgziyfEy</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="ValidateSpecificOrder" id="5e24af33-def7-4d7c-987e-e83393047abd"><con:settings/><con:config><script>import groovy.json.*;
+import com.eviware.soapui.support.GroovyUtils;
+
+
+log.info "Inside Validate Specific Order"
+
+
+//getting ProjectPath
+def groovyUtils = new GroovyUtils(context)
+def projectPath=groovyUtils.projectPath
+//log.info projectPath
+
+def tcId = context.testCase.getTestStepByName("Properties").getPropertyValue("TcId");
+
+//Fetching Response from RestMethod
+def response=context.testCase.getTestStepByName("GetSpecificOrder").getPropertyValue("Response")
+//log.info response
+
+//Validating Response
+if(response.contains("error") &amp;&amp; response.contains("No order with id"))
+{
+	log.info "Please Validate OrderId. Its Invalid or It was Deleted"
+	File specificOrderResponse = new File(projectPath+"\\Responses\\"+tcId+"GetSpecificOrder_Response_Fail.txt")
+	specificOrderResponse.write(response)
+}
+else
+{
+	File specificOrderResponse =new File(projectPath+"\\Responses\\"+tcId+"GetSpecificOrder_Response_Pass.txt")
+	specificOrderResponse.write(response)
+}
+</script></con:config></con:testStep><con:testStep type="groovy" name="UpdateOrderAndDeleteOrder" id="7feb2f25-48ee-4957-9924-3482b952db2b"><con:settings/><con:config><script>import jxl.*;
+import com.eviware.soapui.support.GroovyUtils
+import groovy.json.*
+
+log.info "Inside UpdateOrderand DeleteOrder"
+
+//getting Project Path and Excel File Path
+
+def groovyUtils= new GroovyUtils(context)
+def projectPath=groovyUtils.ProjectPath;
+//log.info projectPath
+
+def tcId = context.testCase.getTestStepByName("Properties").getPropertyValue("TcId");
+
+//getting values from properties
+def isUpdate = context.expand('${Properties#UpdateOrder}')
+def isDelete = context.expand('${Properties#DeleteOrder}')
+
+def serverUrl = context.testCase.getTestStepByName("Properties").getPropertyValue("serverURL")
+def orderID = context.testCase.getTestStepByName("Properties").getPropertyValue("OrderID")
+
+if(isUpdate == 'Y')
+{
+	//getting elements from Properties
+	def updateURI = context.testCase.getTestStepByName("Properties").getPropertyValue("updateOrderURI")
+	def updateReq = context.testCase.getTestStepByName("Properties").getPropertyValue("updateOrderReq")
+	def updateName = context.testCase.getTestStepByName("Properties").getPropertyValue("updateOrderName")
+	
+	//Converting the values to JSON for path
+	def jsonSlurper = new JsonSlurper()
+	jsonReq = jsonSlurper.parseText(updateReq)
+	jsonReq.customerName=updateName
+	//log.info jsonReq
+
+	//Converting to JSON
+	jsonReq=JsonOutput.toJson(jsonReq)
+	//log.info jsonReq
+
+	endPoint = serverUrl+updateURI
+	if(endPoint.contains(":orderId"))
+	{
+		endPoint = endPoint.replaceAll(":orderId",orderID)
+		//log.info endPoint
+	}
+	context.testCase.getTestStepByName("UpdateOrder").setPropertyValue("Request",jsonReq)
+	context.testCase.getTestStepByName("UpdateOrder").setPropertyValue("EndPoint",endPoint)
+
+	testRunner.testCase.getTestStepByName("UpdateOrder").run(testRunner,context)
+
+	//Fetching Response and Validating
+	def updateResponse=context.testCase.getTestStepByName("UpdateOrder").getPropertyValue("Response")
+	//log.info "Response :"+updateResponse
+
+	//Getting Status of the Response
+	def updateResponseHeaders= testRunner.testCase.getTestStepByName("UpdateOrder").testRequest.response.responseHeaders
+	//log.info "Response Headers :"+updateResponseHeaders
+	def updateResponseHeadersStatus = updateResponseHeaders['#status#']
+	updateResponseHeadersStatus=updateResponseHeadersStatus.toString()
+	//log.info updateResponseHeadersStatus
+	
+	if(updateResponseHeadersStatus.contains("204") &amp;&amp; updateResponseHeadersStatus.contains("No Content"))
+	{
+		log.info "Order was Updated"
+	}
+	else if(updateResponse.contains("error") )
+	{
+		if(updateResponse.contains("Missing Authorization"))
+		{
+			log.warn "The Header for Authorization is missing or Invalid" 
+			File updateResponseFile = new File(projectPath+"\\Responses\\"+tcId+"Update_Order_Response_Fail.txt")
+			updateResponseFile.write(updateResponse)
+		}
+		else if(updateResponse.contains("No order with id"))
+		{
+			log.error "Please enter Valid Order ID ! Its not found"
+			File updateResponseFile = new File(projectPath+"\\Responses\\"+tcId+"Update_Order_Response_Fail.txt")
+			updateResponseFile.write(updateResponse)
+		}
+	}
+	//testRunner.testCase.getTestStepByName("DTT_DataLoop").run(testRunner,context)
+}
+else
+{
+	testRunner.testCase.getTestStepByName("DTT_DataLoop").run(testRunner,context)
+}
+
+if(isDelete == 'Y')
+{
+	def deleteURI = context.testCase.getTestStepByName("Properties").getPropertyValue("deleteOrderURI")
+	def endPoint = serverUrl + deleteURI
+	if(endPoint.contains(":orderId"))
+	{
+		endPoint = endPoint.replaceAll(":orderId",orderID)
+		//log.info "deleteURI :"+endPoint
+	}
+	context.testCase.getTestStepByName("DeleteOrder").setPropertyValue("Endpoint",endPoint)
+	testRunner.testCase.getTestStepByName("DeleteOrder").run(testRunner,context)
+
+	//Getting Delete Response and Validating
+	def deleteResponse=context.testCase.getTestStepByName("DeleteOrder").getPropertyValue("Response")
+	//log.info "Delete Response :"+deleteResponse
+
+	//Getting Response Headers for Status
+	def deleteResponseHeaders = context.testCase.getTestStepByName("DeleteOrder").testRequest.response.responseHeaders
+	//log.info deleteResponseHeaders
+	def deleteResponseHeadersStatus = deleteResponseHeaders['#status#']
+	//log.info deleteResponseHeadersStatus
+	deleteResponseHeadersStatus=deleteResponseHeadersStatus.toString()
+	
+	if(deleteResponseHeadersStatus.contains("204") &amp;&amp; deleteResponseHeadersStatus.contains("No Content"))
+	{
+		log.info "Order was Deleted"
+	}
+	else if(deleteResponse.contains("error") )
+	{
+		if(deleteResponse.contains("Missing Authorization"))
+		{
+			log.warn "The Header for Authorization is missing or Invalid" 
+			File deleteResponseFile = new File(projectPath+"\\Responses\\"+tcId+"Delete_Order_Response_Fail.txt")
+			deleteResponseFile.write(deleteResponse)
+		}
+		else if(deleteResponse.contains("No order with id"))
+		{
+			log.error "Please enter Valid Order ID ! Its not found"
+			File deleteResponseFile = new File(projectPath+"\\Responses\\"+tcId+"Delete_Order_Response_Fail.txt")
+			deleteResponseFile.write(deleteResponse)
+		}
+	}
+	testRunner.testCase.getTestStepByName("DTT_DataLoop").run(testRunner,context)
+}
+else
+{
+	testRunner.testCase.getTestStepByName("DTT_DataLoop").run(testRunner,context)
+}
+
+</script></con:config></con:testStep><con:testStep type="restrequest" name="UpdateOrder" id="adfc0ca5-a50a-4e91-a221-75c348e9d259" disabled="true"><con:settings/><con:config service="https://simple-books-api.glitch.me" resourcePath="" methodName="PatchMethod" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="UpdateOrder" id="a4cb373c-d4d7-430a-b303-3d43f5876d28" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer 12621a3e6de51d7271579269b5dd42ae16a2d7141a60421f6b50c6c896d1ce46" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>https://simple-books-api.glitch.me/orders/he1aTPYGlzXS0D0UDHhM6</con:endpoint><con:request>{"customerName":"Oppenheimer"}</con:request><con:originalUri>https://simple-books-api.glitch.me/orders/OyL4Bg2kBAuWpsVCt2vEx</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="DeleteOrder" id="2080e5f9-893c-49f0-9dea-0a00ebbc88ff" disabled="true"><con:settings/><con:config service="https://simple-books-api.glitch.me" resourcePath="" methodName="DeleteMethod" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="DeleteOrder" id="35d3c079-76ba-4f0e-8c2d-16e8a468f4ac" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer 12621a3e6de51d7271579269b5dd42ae16a2d7141a60421f6b50c6c896d1ce46" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>https://simple-books-api.glitch.me/orders/he1aTPYGlzXS0D0UDHhM6</con:endpoint><con:request/><con:originalUri>https://simple-books-api.glitch.me/orders/OyL4Bg2kBAuWpsVCt2vEx</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="DTT_DataLoop" id="035957a7-0a19-4ca1-b698-747aeb4f2bdf"><con:settings/><con:config><script>//getting Result set for Looping
+
+int resultSetCount = context.testCase.getTestStepByName("Properties").getPropertyValue("ResultSetCount").toInteger()
+log.info resultSetCount
+int index = context.testCase.getTestStepByName("Properties").getPropertyValue("Index").toInteger()
+log.info index
+
+if(index&lt;resultSetCount)
+{
+	index = index+1;
+	context.testCase.getTestStepByName("Properties").setPropertyValue("Index",index.toString())
+	if(index&lt;resultSetCount)
+	{
+		testRunner.testCase.getTestStepByName("FrameworkRun").run(testRunner,context)
+	}
+}
+else
+{
+	testRunner.testCase.getTestStepByName("Framework_TC_End").run(testRunner,context)
+}
+</script></con:config></con:testStep><con:testStep type="groovy" name="Framework_TC_End" id="9b1bcd8c-065c-464a-be7c-f677b3ecb7c8"><con:settings/><con:config><script>log.info "FrameWork Completed"</script></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>serverURL</con:name><con:value>https://simple-books-api.glitch.me</con:value></con:property><con:property><con:name>accessToken</con:name><con:value>12621a3e6de51d7271579269b5dd42ae16a2d7141a60421f6b50c6c896d1ce46</con:value></con:property></con:properties></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
