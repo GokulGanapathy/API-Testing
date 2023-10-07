@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e4798b51-8b8a-428a-ab61-af0205d444bf" activeEnvironment="Default" name="FrameWork2-ReqRes" soapui-version="5.7.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="9f9ecb93-5cee-4b96-ab98-67586e572231" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://reqres.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://reqres.in</con:endpoint></con:endpoints><con:resource name="" path="/" id="b99295ff-057c-4f3e-a7f6-8572784dc0a3"><con:settings/><con:parameters/><con:method name="PostMethod" id="8a77b3d1-af0b-40c2-b551-234dd55a6c3e" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200 201</con:status><con:params/><con:element xmlns:reg="https://reqres.in/api/register/">reg:Response</con:element></con:representation><con:request name="Request 1" id="7db23fa6-ff1e-4089-8909-77ce96ab4a49" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="GetMethod" id="8a77b3d1-af0b-40c2-b551-234dd55a6c3e" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:user="https://reqres.in/api/users">user:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element>Fault</con:element></con:representation><con:request name="Request 1" id="7db23fa6-ff1e-4089-8909-77ce96ab4a49" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="PatchMethod" id="8a77b3d1-af0b-40c2-b551-234dd55a6c3e" method="PATCH"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="7db23fa6-ff1e-4089-8909-77ce96ab4a49" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="PutMethod" id="8a77b3d1-af0b-40c2-b551-234dd55a6c3e" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:req="https://reqres.in/">req:Response</con:element></con:representation><con:request name="Request 1" id="7db23fa6-ff1e-4089-8909-77ce96ab4a49" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="DeleteMethod" id="8a77b3d1-af0b-40c2-b551-234dd55a6c3e" method="DELETE"><con:settings/><con:parameters/><con:request name="Request 1" id="7db23fa6-ff1e-4089-8909-77ce96ab4a49" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="9d0f2937-fa67-484c-946b-62b4a6e4dca7" name="FrameWork-ReqRes"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="367c5d42-6021-447f-8e4f-ad4d94774400" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ReqRes-APITesting" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:testStep type="groovy" name="SetIndexToZero" id="801e9df2-8714-430a-bfa7-237ecdab8963"><con:settings/><con:config><script>context.testCase.getTestStepByName("Properties").setPropertyValue("Index",'0')</script></con:config></con:testStep><con:testStep type="groovy" name="FrameWorkRun" id="6030910b-f95a-4fbc-be7e-d8428cac7f42"><con:settings/><con:config><script>
+testRunner.testCase.getTestStepByName("DB_ConnectionAndGetData").run(testRunner,context)
+testRunner.testCase.getTestStepByName("Data_Request_Builder").run(testRunner,context)
+//testRunner.testCase.getTestStepByName("Property Transfer").run(testRunner,context)
+testRunner.testCase.getTestStepByName("ValidateResponseAndSave").run(testRunner,context)
+testRunner.testCase.getTestStepByName("Delay").run(testRunner,context)
+testRunner.testCase.getTestStepByName("DTT_DataLoop").run(testRunner,context)
+</script></con:config></con:testStep><con:testStep type="groovy" name="DB_ConnectionAndGetData" id="45c476c2-b705-4e64-b6b9-fe94d21b5a18"><con:settings/><con:config><script>import groovy.sql.*;
+import com.eviware.soapui.support.GroovyUtils;
+
+//Getting Required Details fro DB Connection
+String DBurl = context.expand('${#Project#DB_Url}')
+String UserName =  context.expand('${#Project#DB_Username}')
+String Password =  context.expand('${#Project#DB_Password}')
+String Driver =  context.expand('${#Project#DB_Driver}')
+
+def sql = Sql.newInstance(DBurl,UserName,Password,Driver)
+log.info "DB Connection Successfull"
+
+//Getting Query from File
+def groovyUtils = new GroovyUtils(context)
+projectPath = groovyUtils.projectPath
+log.info projectPath
+
+File queryFile = new File(projectPath+"\\Query.txt")
+
+def sqlQuery = queryFile.readLines()
+sqlQuery = sqlQuery[0]   //For getting the first Line
+
+def resultSet = sql.rows(sqlQuery)
+def resultsetSize = resultSet.size()
+log.info (resultsetSize)
+context.testCase.getTestStepByName("Properties").setPropertyValue("ResultSetSize",resultsetSize.toString())
+//log.info resultSet
+
+def index = context.testCase.getTestStepByName("Properties").getPropertyValue("Index").toInteger()
+log.info index
+//for(int i=0;i&lt;resultsetSize;++i)
+//{
+	def tcId = resultSet[index]."tcid"
+	log.info tcId
+	def method = resultSet[index]."method"
+	def serviceURI = resultSet[index]."serviceuri"
+	def request = resultSet[index]."request"
+	def response = resultSet[index]."Response"
+	def name = resultSet[index]."name"
+	def job = resultSet[index]."job"
+	def email = resultSet[index]."email"
+	def password = resultSet[index]."password"
+	def userId = resultSet[index]."userid"
+//}
+
+context.testCase.getTestStepByName("Properties").setPropertyValue("TC_id",tcId)
+context.testCase.getTestStepByName("Properties").setPropertyValue("Method",method)
+context.testCase.getTestStepByName("Properties").setPropertyValue("serviceURI",serviceURI)
+context.testCase.getTestStepByName("Properties").setPropertyValue("Request",request)
+context.testCase.getTestStepByName("Properties").setPropertyValue("Response",response)
+context.testCase.getTestStepByName("Properties").setPropertyValue("Name",name)
+context.testCase.getTestStepByName("Properties").setPropertyValue("Job",job)
+context.testCase.getTestStepByName("Properties").setPropertyValue("E-mail",email)
+context.testCase.getTestStepByName("Properties").setPropertyValue("Password",password)
+context.testCase.getTestStepByName("Properties").setPropertyValue("UserId",userId)
+
+//getting URL from Config
+File Config = new File(projectPath+"\\Config.txt")
+
+def configFile =Config.readLines()
+def serverUrl = configFile[0].split("=")
+serverUrl = serverUrl[1]
+log.info serverUrl
+
+context.testCase.getTestStepByName("Properties").setPropertyValue("serverUrl",serverUrl)</script></con:config></con:testStep><con:testStep type="groovy" name="Data_Request_Builder" id="8de3a9a0-185d-4f55-8f97-b0ed98e62fff"><con:settings/><con:config><script>import groovy.json.*;
+
+// get all the Required Details from Properties
+
+def method = context.testCase.getTestStepByName("Properties").getPropertyValue("Method")
+log.info method
+
+def serverUrl = context.testCase.getTestStepByName("Properties").getPropertyValue("serverUrl")
+def serviceURI = context.testCase.getTestStepByName("Properties").getPropertyValue("serviceURI")
+
+def name = context.testCase.getTestStepByName("Properties").getPropertyValue("Name")
+def job = context.testCase.getTestStepByName("Properties").getPropertyValue("Job")
+def email = context.testCase.getTestStepByName("Properties").getPropertyValue("E-mail")
+def password = context.testCase.getTestStepByName("Properties").getPropertyValue("Password")
+def userId = context.testCase.getTestStepByName("Properties").getPropertyValue("UserId")
+
+def request = context.testCase.getTestStepByName("Properties").getPropertyValue("Request")
+log.info request
+
+
+if(method=='Patch' || method=='Put'|| method=='Post')
+{
+	def jsonSlurper = new JsonSlurper();
+	jsonRequest = jsonSlurper.parseText(request)
+	log.info jsonRequest
+	if(request.contains("email") &amp;&amp; request.contains("password"))
+	{
+		jsonRequest.email=email
+		jsonRequest.password=password
+	}
+	else if(request.contains("name") &amp;&amp; request.contains("job"))
+	{
+		jsonRequest.name=name
+		jsonRequest.job=job
+	}
+	jsonRequest = JsonOutput.toJson(jsonRequest)
+	log.info "jsonRequest : "+jsonRequest
+}
+
+endPoint = serverUrl+serviceURI
+if(endPoint.contains("{userId}"))
+{
+	endPoint = endPoint.replaceAll("\\{userId\\}",userId)
+	log.info endPoint
+}
+else if(endPoint.contains("PageId"))
+{
+	endPoint = endPoint.replaceAll("\\{PageID\\}",request)
+}
+
+//Passing to REST Method
+if(method == "Get")
+{
+	testRunner.testCase.getTestStepByName("GetMethod").setPropertyValue("Endpoint",endPoint)
+	testRunner.testCase.getTestStepByName("GetMethod").run(testRunner,context)
+}
+else if(method == "Delete")
+{
+	testRunner.testCase.getTestStepByName("DeleteMethod").setPropertyValue("Endpoint",endPoint)
+	testRunner.testCase.getTestStepByName("DeleteMethod").run(testRunner,context)
+}
+else if(method == "Post")
+{
+	testRunner.testCase.getTestStepByName("PostMethod").setPropertyValue("Endpoint",endPoint)
+	testRunner.testCase.getTestStepByName("PostMethod").setPropertyValue("Request",jsonRequest)
+	testRunner.testCase.getTestStepByName("PostMethod").run(testRunner,context)
+}
+else if(method == "Put")
+{
+	testRunner.testCase.getTestStepByName("PutMethod").setPropertyValue("Endpoint",endPoint)
+	testRunner.testCase.getTestStepByName("PutMethod").setPropertyValue("Request",jsonRequest)
+	testRunner.testCase.getTestStepByName("PutMethod").run(testRunner,context)
+}
+else if(method == "Patch")
+{
+	testRunner.testCase.getTestStepByName("PatchMethod").setPropertyValue("Endpoint",endPoint)
+	testRunner.testCase.getTestStepByName("PatchMethod").setPropertyValue("Request",jsonRequest)
+	testRunner.testCase.getTestStepByName("PatchMethod").run(testRunner,context)
+}
+</script></con:config></con:testStep><con:testStep type="properties" name="Properties" id="8a194717-9f5c-47b5-93c0-af60158f91ac"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>serverUrl</con:name><con:value>https://reqres.in</con:value></con:property><con:property><con:name>Index</con:name><con:value>7</con:value></con:property><con:property><con:name>TC_id</con:name><con:value>ReqRes_TC06_UpdateUser</con:value></con:property><con:property><con:name>Method</con:name><con:value>Put</con:value></con:property><con:property><con:name>serviceURI</con:name><con:value>/api/users/{userId}</con:value></con:property><con:property><con:name>Request</con:name><con:value>{"name": "morpheus","job": "leader"}</con:value></con:property><con:property><con:name>Response</con:name><con:value>{"name": "morpheus","job": "zion resident","updatedAt": "2023-10-07T07:21:15.101Z"}</con:value></con:property><con:property><con:name>Name</con:name><con:value>Jaiswal Yashashwi</con:value></con:property><con:property><con:name>Job</con:name><con:value>Opener</con:value></con:property><con:property><con:name>E-mail</con:name><con:value>Jaiswal@rcb.com</con:value></con:property><con:property><con:name>Password</con:name><con:value>ICCWC2023</con:value></con:property><con:property><con:name>ResultSetSize</con:name><con:value>8</con:value></con:property><con:property><con:name>Orderid</con:name><con:value>4</con:value></con:property><con:property><con:name>PostMethodResponse</con:name><con:value>{"name":"Jaiswal Y","job":"Opener","id":"78","createdAt":"2023-10-07T15:58:19.140Z"}</con:value></con:property><con:property><con:name>UserId</con:name><con:value>2</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="PostMethod" id="26ceeae5-5f38-4931-bf27-f40b6db6f61f"><con:settings/><con:config service="https://reqres.in" methodName="PostMethod" resourcePath="/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="PostMethod" id="a6f2ff6d-eacb-4607-b0e4-4921ed7288a1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://reqres.in/api/users</con:endpoint><con:request>{"name":"Jaiswal Y","job":"Opener"}</con:request><con:originalUri>https://reqres.in/api/register/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetMethod" id="213cb7ee-648b-4566-a89f-3c002daa8a9e"><con:settings/><con:config service="https://reqres.in" resourcePath="/" methodName="GetMethod" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetMethod" id="7db23fa6-ff1e-4089-8909-77ce96ab4a49" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in/api/users/2</con:endpoint><con:request/><con:originalUri>https://reqres.in/api/users</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="PutMethod" id="454267bd-bd74-421a-a82f-8e85250e9f1c"><con:settings/><con:config service="https://reqres.in" resourcePath="/" methodName="PutMethod" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="PutMethod" id="7db23fa6-ff1e-4089-8909-77ce96ab4a49" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in/api/users/2</con:endpoint><con:request>{"name":"Jaiswal Yashashwi","job":"Opener"}</con:request><con:originalUri>https://reqres.in/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="PatchMethod" id="0eedf7d6-737e-49a7-8040-fe4c572795aa"><con:settings/><con:config service="https://reqres.in" resourcePath="/" methodName="PatchMethod" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="PatchMethod" id="7db23fa6-ff1e-4089-8909-77ce96ab4a49" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in/api/users/2</con:endpoint><con:request>{"name":"Jaiswal","job":"LHOpen"}</con:request><con:originalUri>https://reqres.in/api/users/2/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="DeleteMethod" id="c791bae2-b944-4fc4-90e7-be7f594a31f9"><con:settings/><con:config service="https://reqres.in" resourcePath="/" methodName="DeleteMethod" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="DeleteMethod" id="7db23fa6-ff1e-4089-8909-77ce96ab4a49" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://reqres.in/api/users/2</con:endpoint><con:request/><con:originalUri>https://reqres.in//api/users/8/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="1618cddb-87c5-48d4-a006-fc9ae8ab89e6"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>PostResponse</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>PostMethod</con:sourceStep><con:sourcePath/><con:targetType>PostMethodResponse</con:targetType><con:targetStep>Properties</con:targetStep><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="groovy" name="ValidateResponseAndSave" id="20ec45a3-d068-477e-81af-b0efab277e91"><con:settings/><con:config><script>import com.eviware.soapui.support.GroovyUtils
+import java.text.*;
+import java.util.*;
+
+//validating the Response Status with Status from ResponseHeaders 
+def method = context.testCase.getTestStepByName("Properties").getPropertyValue("Method")
+def tcId = context.testCase.getTestStepByName("Properties").getPropertyValue("TC_id")
+def response
+if(method=="Get" || method=="Put" || method =="Patch")
+{
+	if(method=='Get')
+	{
+		response = testRunner.testCase.getTestStepByName("GetMethod").getPropertyValue("Response")
+		def responseHeaders = testRunner.testCase.getTestStepByName("GetMethod").testRequest.response.responseHeaders
+		status = responseHeaders['#status#'].toString()
+		log.info status
+	}
+	else if(method=='Put')
+	{
+		response = testRunner.testCase.getTestStepByName("PutMethod").getPropertyValue("Response")
+		def responseHeaders = testRunner.testCase.getTestStepByName("PutMethod").testRequest.response.responseHeaders
+		status = responseHeaders['#status#'].toString()
+		log.info status
+	}
+	else if(method=='Patch')
+	{
+		response = testRunner.testCase.getTestStepByName("PatchMethod").getPropertyValue("Response")
+		def responseHeaders = testRunner.testCase.getTestStepByName("PatchMethod").testRequest.response.responseHeaders
+		status = responseHeaders['#status#'].toString()
+		log.info status
+	}
+	assert status.contains('200')
+}
+else if(method=="Post")
+{
+	response = testRunner.testCase.getTestStepByName("PostMethod").getPropertyValue("Response")
+	def responseHeaders = testRunner.testCase.getTestStepByName("PostMethod").testRequest.response.responseHeaders
+	status = responseHeaders['#status#'].toString()
+	assert (status.contains('201') || status.contains('200'))
+}
+else if(method=="Delete")
+{
+	response = testRunner.testCase.getTestStepByName("DeleteMethod").getPropertyValue("Response")
+	def responseHeaders = context.testCase.getTestStepByName("DeleteMethod").testRequest.response.responseHeaders
+	status = responseHeaders['#status#'].toString()
+	assert status.contains('204')
+}
+
+def groovyUtils = new GroovyUtils(context)
+projectPath = groovyUtils.projectPath
+
+
+//Storing the Response in the New Folder with date in Folder name
+def date = new Date()
+def dateFormat = new SimpleDateFormat('YYYY-MM-DD')
+date = dateFormat.format(date)
+log.info date
+
+//Creating new Folder
+File responseFileDir = new File(projectPath+"\\Responses\\Response"+date)
+if(!responseFileDir.exists())
+{
+	responseFileDir.mkdirs()
+}
+//Creating new file and save Response
+File responseFile = new File(projectPath+"\\Responses\\Response"+date+"\\Response_"+tcId+".txt")
+if(response!=null)
+{
+	responseFile.write(response)
+}
+if(method=='Delete')
+{
+	responseFile.write("User Deleted")
+}
+</script></con:config></con:testStep><con:testStep type="delay" name="Delay" id="f9eca1ba-7dbb-4f31-8bca-f0afd2bbf046"><con:settings/><con:config><delay>1000</delay></con:config></con:testStep><con:testStep type="groovy" name="DTT_DataLoop" id="5c28ed9d-5f4a-4fc3-bd05-a6d4bd0dae10"><con:settings/><con:config><script>def index = context.testCase.getTestStepByName("Properties").getPropertyValue("Index").toInteger()
+def resultSetSize = context.testCase.getTestStepByName("Properties").getPropertyValue("ResultSetSize").toInteger()
+log.info index
+log.info resultSetSize
+
+if(index&lt;resultSetSize-1)
+{
+	index=index+1;
+	context.testCase.getTestStepByName("Properties").setPropertyValue("Index",index.toString())
+	if(index&lt;resultSetSize-1)
+	{
+		testRunner.testCase.getTestStepByName("FrameWorkRun").run(testRunner,context)
+	}
+}
+else
+{
+	testRunner.testCase.getTestStepByName("FrameWorkEnd").run(testRunner,context)
+}
+</script></con:config></con:testStep><con:testStep type="groovy" name="FrameWorkEnd" id="7c19ad64-0b9f-427d-8216-2dc3deae0193"><con:settings/><con:config><script/></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>DB_Url</con:name><con:value>jdbc:postgresql://localhost:5432/postgres</con:value></con:property><con:property><con:name>DB_Username</con:name><con:value>postgres</con:value></con:property><con:property><con:name>DB_Password</con:name><con:value>Ganapathy95</con:value></con:property><con:property><con:name>DB_Driver</con:name><con:value>org.postgresql.Driver</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

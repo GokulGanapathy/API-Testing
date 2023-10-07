@@ -1,0 +1,1 @@
+Select tcid,method,ServiceUri,request,response,name,job,email,password,userid from reqres
