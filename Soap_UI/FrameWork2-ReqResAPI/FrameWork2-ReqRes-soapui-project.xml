@@ -203,7 +203,7 @@ projectPath = groovyUtils.projectPath
 
 //Storing the Response in the New Folder with date in Folder name
 def date = new Date()
-def dateFormat = new SimpleDateFormat('YYYY-MM-DD')
+def dateFormat = new SimpleDateFormat('YYYY-MM-dd')
 date = dateFormat.format(date)
 log.info date
 
@@ -213,15 +213,17 @@ if(!responseFileDir.exists())
 {
 	responseFileDir.mkdirs()
 }
-//Creating new file and save Response
-File responseFile = new File(projectPath+"\\Responses\\Response"+date+"\\Response_"+tcId+".txt")
-if(response!=null)
-{
-	responseFile.write(response)
-}
-if(method=='Delete')
-{
-	responseFile.write("User Deleted")
+else{
+	//Creating new file and save Response
+	File responseFile = new File(projectPath+"\\Responses\\Response"+date+"\\Response_"+tcId+".txt")
+	if(response!=null)
+	{
+		responseFile.write(response)
+	}
+	if(method=='Delete')
+	{
+		responseFile.write("User Deleted")
+	}
 }
 </script></con:config></con:testStep><con:testStep type="delay" name="Delay" id="f9eca1ba-7dbb-4f31-8bca-f0afd2bbf046"><con:settings/><con:config><delay>1000</delay></con:config></con:testStep><con:testStep type="groovy" name="DTT_DataLoop" id="5c28ed9d-5f4a-4fc3-bd05-a6d4bd0dae10"><con:settings/><con:config><script>def index = context.testCase.getTestStepByName("Properties").getPropertyValue("Index").toInteger()
 def resultSetSize = context.testCase.getTestStepByName("Properties").getPropertyValue("ResultSetSize").toInteger()
