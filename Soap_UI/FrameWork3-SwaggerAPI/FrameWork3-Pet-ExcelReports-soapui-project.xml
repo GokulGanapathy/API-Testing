@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="4d9573ad-5ad3-49c3-8324-f513c633aea7" activeEnvironment="Default" name="FrameWork3-Pet_ExcelReports" soapui-version="5.7.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="1669add7-5d93-4df8-be59-f707473f080c" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://petstore.swagger.io" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://petstore.swagger.io</con:endpoint></con:endpoints><con:resource name="" path="" id="6dcc0d6e-ae03-4149-adc4-483ac39a2a5e"><con:settings/><con:parameters/><con:method name="1" id="44d8f1e9-8874-452c-b057-7ec1f4b9ef5c" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:pet="https://petstore.swagger.io/v2/pet">pet:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="ad34e4c1-5181-44f4-b5d7-fbcf05a9dd91" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://petstore.swagger.io</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="e75eab1d-668e-45ea-9f15-d6e133d3bf85" name="FrameWork3"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="00f208e4-f9d7-4eca-8572-95dd74ba3a3e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Add_Pet_ExcelReports" searchProperties="true"><con:settings/><con:testStep type="groovy" name="SetIndexToOne" id="e937caf4-7281-4959-b12e-6490b9d9f1a8"><con:settings/><con:config><script>context.testCase.getTestStepByName("Properties").setPropertyValue("Index","1")</script></con:config></con:testStep><con:testStep type="groovy" name="FrameWorkRun" id="9ed5f069-f853-43d4-ad46-de9501e81196"><con:settings/><con:config><script>testRunner.testCase.getTestStepByName("GetDataFromExcel").run(testRunner,context)
+testRunner.testCase.getTestStepByName("CompareResponseAndExcelReport").run(testRunner,context)
+testRunner.testCase.getTestStepByName("Delay").run(testRunner,context)
+testRunner.testCase.getTestStepByName("Data_Loop").run(testRunner,context)</script></con:config></con:testStep><con:testStep type="groovy" name="GetDataFromExcel" id="7fcd49f4-cf24-4e27-a89a-990372e908a6"><con:settings/><con:config><script>import jxl.*;
+import com.eviware.soapui.support.GroovyUtils;
+import groovy.json.*;
+
+//Getting Project path from groovyUtils
+def groovyUtils = new GroovyUtils(context)
+def projectPath = groovyUtils.projectPath
+
+//Accessing Excel File
+File ExcelInput = new File(projectPath+"\\InputExcel.xls");
+Workbook workbook = Workbook.getWorkbook(ExcelInput)
+Sheet sheet = workbook.getSheet(0)
+
+def resultSetSize = sheet.getRows()
+log.info resultSetSize
+
+context.testCase.getTestStepByName("Properties").setPropertyValue("resultSetSize",resultSetSize.toString())
+
+
+def index=context.testCase.getTestStepByName("Properties").getPropertyValue("Index").toInteger()
+
+def url= sheet.getCell(0,index).getContents()
+def uri = sheet.getCell(1,index).getContents()
+def method = sheet.getCell(2,index).getContents()
+def request = sheet.getCell(3,index).getContents()
+def name = sheet.getCell(4,index).getContents()
+def id = sheet.getCell(5,index).getContents()
+def expectedResult = sheet.getCell(6,index).getContents()
+def tcId = sheet.getCell(7,index).getContents();
+def expResNodePath = sheet.getCell(8,index).getContents()
+
+context.testCase.getTestStepByName("Properties").setPropertyValue("url",url)
+context.testCase.getTestStepByName("Properties").setPropertyValue("uri",uri)
+context.testCase.getTestStepByName("Properties").setPropertyValue("method",method)
+context.testCase.getTestStepByName("Properties").setPropertyValue("request",request)
+context.testCase.getTestStepByName("Properties").setPropertyValue("name",name)
+context.testCase.getTestStepByName("Properties").setPropertyValue("id",id)
+context.testCase.getTestStepByName("Properties").setPropertyValue("Expected Result",expectedResult)
+context.testCase.getTestStepByName("Properties").setPropertyValue("TC_ID",tcId)
+context.testCase.getTestStepByName("Properties").setPropertyValue("Exp_Res_NodePath",expResNodePath)
+
+def endPoint = url+uri
+
+//gettinf Json Slurper for editing Json Value in Request
+def jsonSlurper = new JsonSlurper()
+def jsonRequest = jsonSlurper.parseText(request)
+if (name!=null)
+{
+	jsonRequest.name=name
+}
+jsonRequest.id=id
+
+//converting text to JSON
+jsonRequest = JsonOutput.toJson(jsonRequest)
+
+testRunner.testCase.getTestStepByName("Add_Pet").setPropertyValue("Endpoint",endPoint)
+testRunner.testCase.getTestStepByName("Add_Pet").setPropertyValue("Request",jsonRequest)
+testRunner.testCase.getTestStepByName("Add_Pet").run(testRunner,context)</script></con:config></con:testStep><con:testStep type="properties" name="Properties" id="ec85786f-d035-47e2-a5bd-bd4b25fbc4f9"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>url</con:name><con:value>http://petstore.swagger.io</con:value></con:property><con:property><con:name>uri</con:name><con:value>/v2/user</con:value></con:property><con:property><con:name>method</con:name><con:value>Post</con:value></con:property><con:property><con:name>request</con:name><con:value>{
+  "id" : 0,
+  "username" : "Gokul",
+  "firstName" : "Gokul",
+  "lastName" : "Ganapathy",
+  "email" : "gok123@mail.com",
+  "password" : "987789",
+  "phone" : "0987123451",
+  "userStatus" : 1
+}</con:value></con:property><con:property><con:name>name</con:name><con:value>Gokul</con:value></con:property><con:property><con:name>id</con:name><con:value>8</con:value></con:property><con:property><con:name>Expected Result</con:name><con:value>200</con:value></con:property><con:property><con:name>TC_ID</con:name><con:value>TC03_CreateUser</con:value></con:property><con:property><con:name>Index</con:name><con:value>3</con:value></con:property><con:property><con:name>resultSetSize</con:name><con:value>4</con:value></con:property><con:property><con:name>Exp_Res_NodePath</con:name><con:value>code</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="Add_Pet" id="098cd2b8-14a2-4fc8-b7a5-072a09afb64a"><con:settings/><con:config service="http://petstore.swagger.io" resourcePath="" methodName="1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Add_Pet" id="ad34e4c1-5181-44f4-b5d7-fbcf05a9dd91" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://petstore.swagger.io/v2/user</con:endpoint><con:request>{"id":"8","username":"Gokul","firstName":"Gokul","lastName":"Ganapathy","email":"gok123@mail.com","password":"987789","phone":"0987123451","userStatus":1,"name":"Gokul"}</con:request><con:originalUri>https://petstore.swagger.io/v2/pet</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="CompareResponseAndExcelReport" id="23e23b0a-5a6e-49a4-acbc-7e8dff48a21d"><con:settings/><con:config><script>import jxl.*;
+import jxl.write.*;
+import groovy.json.*;
+import com.eviware.soapui.support.GroovyUtils;
+import java.text.*;
+import java.util.*;
+import java.io.File.*;
+
+def groovyUtils = new GroovyUtils(context)
+def projectPath = groovyUtils.projectPath
+
+def index = context.testCase.getTestStepByName("Properties").getPropertyValue("Index").toInteger()
+def tcId = context.testCase.getTestStepByName("Properties").getPropertyValue("TC_ID")
+
+def response = context.testCase.getTestStepByName("Add_Pet").getPropertyValue("Response")
+
+//Parsing Json Response
+def jsonSlurper = new JsonSlurper()
+jsonResponse = jsonSlurper.parseText(response)
+log.info jsonResponse
+
+//getting status and Expected Result from Response
+
+def expectedRes = context.testCase.getTestStepByName("Properties").getPropertyValue("Expected Result").toString()
+def exp_res_nodePath = context.testCase.getTestStepByName("Properties").getPropertyValue("Exp_Res_NodePath")
+log.info "expectedRes"+expectedRes
+log.info "exp_res_nodePath"+exp_res_nodePath
+
+def actualRes = jsonResponse[exp_res_nodePath]
+actualRes = actualRes.toString()
+log.info actualRes
+
+def result
+if(actualRes.equals(expectedRes))
+{
+	result ="Pass"
+}
+else 
+{
+	result = "Fail"
+}
+
+
+def date = new Date()
+def sdf = new SimpleDateFormat("yyyy-MM-dd")
+date = sdf.format(date)
+log.info date
+//Creating a Excel Report and Enter data into the sheet
+
+File ExcelOutput = new File(projectPath+"\\ExcelReport_"+date+".xls");
+
+if(!ExcelOutput.exists())
+{
+	ExcelOutput.createNewFile()
+	//Create a WorkBook and Sheet using WritabelWorkbook
+	WritableWorkbook Writableworkbook = Workbook.createWorkbook(ExcelOutput)
+	Sheet sheet = Writableworkbook.createSheet("Results",0)
+
+	//1.Headers
+	sheet.addCell(new Label (0,0,"TC_ID"))
+	sheet.addCell(new Label (1,0,"ExpectedResult"))
+	sheet.addCell(new Label (2,0,"Actual_value"))
+	sheet.addCell(new Label (3,0,"Result"))
+	sheet.addCell(new Label (4,0,"Response"))
+	Writableworkbook.write()
+	Writableworkbook.close()
+}
+else
+{
+	log.info "Excel Sheet is already created! Please close it if opened"
+}
+
+Workbook workbook = Workbook.getWorkbook(ExcelOutput)
+WritableWorkbook tempWritableWorkbook = Workbook.createWorkbook(ExcelOutput,workbook) 
+Sheet tempSheet = tempWritableWorkbook.getSheet(0)
+
+tempSheet.addCell(new Label (0,index,tcId))
+tempSheet.addCell(new Label (1,index,expectedRes))
+tempSheet.addCell(new Label (2,index,actualRes.toString()))
+tempSheet.addCell(new Label (3,index,result))
+tempSheet.addCell(new Label (4,index,jsonResponse.toString()))
+
+tempWritableWorkbook.write()
+tempWritableWorkbook.close()
+</script></con:config></con:testStep><con:testStep type="delay" name="Delay" id="357bbc91-1a58-4027-8727-9c500e48c458"><con:settings/><con:config><delay>5000</delay></con:config></con:testStep><con:testStep type="groovy" name="Data_Loop" id="d68f6429-b89a-4065-9eee-8f5a295c8515"><con:settings/><con:config><script>int index = context.testCase.getTestStepByName("Properties").getPropertyValue("Index").toInteger()
+int resultSetSize = context.testCase.getTestStepByName("Properties").getPropertyValue("resultSetSize").toInteger()
+
+if(index&lt;resultSetSize-1)
+{
+	index++;
+	context.testCase.getTestStepByName("Properties").setPropertyValue("Index",index.toString())
+	if(index&lt;=resultSetSize-1)
+	{
+		testRunner.testCase.getTestStepByName("FrameWorkRun").run(testRunner,context)
+	}
+}
+else 
+{
+	log.info "Swagger FrameWork Testing Completed"
+}
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
